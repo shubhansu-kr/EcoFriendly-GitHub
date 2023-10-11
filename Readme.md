@@ -13,3 +13,12 @@ The workflow runner fetches a random quote and appends it to the quotes.txt file
 3. Go to .github/workflows/node.js.yml file.
 4. Replace the username and email in line 25 and 26.
 5. Make sure you have enabled the read and write permission of workflow setting."Read and write permissions" are enabled in Settings -> Actions -> General -> Workflow permissions.
+
+## Update
+
+I have disabled the github actions for this repository to prevent it from populating my github graph. So if you fork this repository, you will notice that `workflows` folder is missing in the `.github` folder, which may cause confusion or discrepancy.
+
+Solution: After forking the repository you can simply create `workflows` folder
+in your cloned repository and place the `node.js.yml` inside it.
+or
+You can just go to this working example: ([Losttrack21/EcoFriendly-GitHub](https://github.com/Losttrack21/EcoFriendly-GitHub)) and generate from template there.
