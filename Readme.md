@@ -4,7 +4,7 @@ Github Workflow setup to keep your contribution graph green.
 
 ## Working
 
-The workflow runner fetches a random quote and appends it to the readme file every 12 hours. The changes to the file is then commited and pushed recording a contribution keeping the graph green.
+The workflow runner fetches a random quote and appends it to the quotes.txt file every 12 hours. The changes to the file is then commited and pushed recording a contribution keeping the graph green.
 
 ## Getting started
 
