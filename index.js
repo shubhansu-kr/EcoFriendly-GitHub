@@ -11,7 +11,7 @@ async function updateReadme() {
     const response = await fetch("https://api.quotable.io/random");
     const data = await response.json();
 
-    let readme = `Updated on ${new Date().toUTCString()}: `;
+    let readme = `Quote on ${new Date().toUTCString()}: `;
 
     if (response.ok) {
         readme += ` ${data["content"]} - ${data["author"]}`;
