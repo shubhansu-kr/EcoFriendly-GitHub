@@ -8,8 +8,21 @@ async function updateReadme() {
         // console.log(data.toString());
     });
 
-    const response = await fetch("https://api.quotable.io/random");
-    const data = await response.json();
+    // fetch("https://api.quotable.io/random").then((v) => {
+
+    // }).catch((e) => {
+
+    // }).then(() => {});
+
+    let data = {};
+    try {
+
+        const response = await fetch("https://api.quotable.io/random");
+        data = await response.json();
+    } catch (e) {
+        console.log(e);
+        return;
+    }
 
     let readme = `Quote on ${new Date().toUTCString()}: `;
 
