@@ -2,7 +2,7 @@ async function updateReadme() {
     const fs = require('fs')
     let prevData = "";
 
-    fs.readFile('README.md', (err, data) => {
+    fs.readFile('quotes.txt', (err, data) => {
         if (err) throw err;
         prevData += data.toString();
         // console.log(data.toString());
