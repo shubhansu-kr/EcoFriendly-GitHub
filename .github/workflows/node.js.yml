@@ -18,7 +18,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: '18.x'
-    - name: Update README.md
+    - name: Update Quotes.txt
       run: node index.js > quotes.txt
     - name: Commit change & Push
       run: |
