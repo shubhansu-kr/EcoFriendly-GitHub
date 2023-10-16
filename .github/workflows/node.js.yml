@@ -5,7 +5,7 @@ on:
     branches: master
   workflow_dispatch:
   schedule:
-    - cron: '10 */12 * * *'
+    - cron: '10 */11 * * *'
 
 jobs:
   build:
@@ -19,7 +19,7 @@ jobs:
       with:
         node-version: '18.x'
     - name: Update Quotes.txt
-      run: node index.js > quotes.txt
+      run: node index.js
     - name: Commit change & Push
       run: |
           git config user.name 'YourUserNameHere'
