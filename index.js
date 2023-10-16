@@ -1,7 +1,7 @@
 async function updateReadme() {
     const fs = require('fs');
 
-    let readme = "\n";
+    let readme = "\r\n";
 
     try {
         const response = await fetch("https://api.quotable.io/random");
