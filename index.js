@@ -1,7 +1,7 @@
 async function updateReadme() {
     const fs = require('fs');
 
-    let readme = "\r\n";
+    let readme = " \r\n";
 
     try {
         const response = await fetch("https://api.quotable.io/random");
@@ -17,11 +17,14 @@ async function updateReadme() {
         readme += `Fetching failed`;
     }
 
+    readme += "\r\n";
+
     fs.writeFile('quotes.txt', readme, { 'flag': 'a' }, function (err) {
         if (err) {
             return console.error(err);
         }
     });
+
 }
 
 updateReadme();
