@@ -4,12 +4,12 @@ async function updateReadme() {
     let readme = " \r\n";
 
     try {
-        const response = await fetch("https://api.quotable.io/random");
+        const response = await fetch("https://zenquotes.io/api/random");
         const data = await response.json();
         readme = `Quote on |${new Date().toUTCString()}| : `;
 
-        if (response.ok) {
-            readme += ` ${data["content"]} - ${data["author"]}`;
+        if (response.ok && Array.isArray(data) && data.length > 0) {
+            readme += ` ${data[0]["q"]} - ${data[0]["a"]}`;
         } else {
             throw new Error('response not OK');
         }
